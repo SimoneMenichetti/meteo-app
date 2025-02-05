@@ -1,5 +1,9 @@
 # See https://docs.hub.com/get-started/getting-started-with-/ignoring-files for more about ignoring files.
 
+# Ignora i file environment
+src/app/environment/environment.ts
+src/app/environment/environment.prod.ts
+
 # Compiled output
 /dist
 /tmp
@@ -41,6 +45,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# file di configurazione dell'ambiente//
-src/environment/environment.ts
-src/environment/environment.prod.ts
+

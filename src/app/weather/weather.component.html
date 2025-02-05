@@ -1,0 +1,49 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="cityName"
+          (input)="onCityInput()"
+          placeholder="Enter city name"
+        />
+        <button class="btn btn-primary" (click)="getWeather()">🔍</button>
+      </div>
+
+      <!-- Lista suggerimenti per le città -->
+      <ul class="list-group mt-2" *ngIf="citySuggestions.length">
+        <li
+          class="list-group-item list-group-item-action"
+          *ngFor="let city of citySuggestions"
+          (click)="selectCity(city)"
+        >
+          {{ city }}
+        </li>
+      </ul>
+
+      <!-- Messaggio di caricamento -->
+      <div *ngIf="loading" class="alert alert-info mt-3 text-center">Loading...</div>
+
+      <!-- Messaggio di errore -->
+      <div *ngIf="errorMessage" class="alert alert-danger mt-3 text-center">
+        {{ errorMessage }}
+      </div>
+
+      <!-- Dati meteo -->
+      <div *ngIf="weatherData" class="card mt-4 shadow">
+        <div class="card-body text-center">
+          <h2 class="card-title">Weather in {{ weatherData.name }}</h2>
+          <img
+            [src]="'https://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@2x.png'"
+            alt="Weather Icon"
+            class="img-fluid"
+          />
+          <p class="fs-3 fw-bold">{{ weatherData.main.temp }}°C</p>
+          <p class="text-muted">{{ weatherData.weather[0].description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

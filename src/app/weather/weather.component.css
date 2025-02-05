@@ -1,4 +1,4 @@
-/* Rimuove il bordo dal pulsante di ricerca quando viene cliccato */
+
 .btn:focus,
 .form-control:focus {
   box-shadow: none !important;

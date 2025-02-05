@@ -4,7 +4,7 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { environment } from '../environment/environment';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-weather',

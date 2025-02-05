@@ -1,8 +1,8 @@
 # See https://docs.hub.com/get-started/getting-started-with-/ignoring-files for more about ignoring files.
 
 # Ignora i file environment
-src/app/environment/environment.ts
-src/app/environment/environment.prod.ts
+src/app/environments/environment.ts
+src/app/environments/environment.prod.ts
 
 # Compiled output
 /dist
